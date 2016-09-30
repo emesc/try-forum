@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
   end
 
   def update
-    if @message.update_attributes(message_params)
+    if @message.update(message_params)
       redirect_to message_path(@message), notice: "Message updated successfully."
     else
       render 'edit'
