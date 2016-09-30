@@ -1,1 +1,6 @@
 <h1>Woop!</h1>
+<% @messages.each do |message| %>
+  <%= message.title %><br>
+  <%= message.description %><br>
+  Created <%= time_ago_in_words(message.created_at) %> ago
+<% end %>
